@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #075c66;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.heading {
+  padding: 3rem 0;
+  background-color:#03C9D4;
+}
+.heading h1 {
+  color: #ffff;
+  text-align: center;
+}
+.form-field {
+  color: #ffff;
+  width: 50%;
+  background-color:#ffff;
+}
+.radio-btn{
+  display: flex;
+  gap: 5rem;
+}
+.select-field{
+  display: flex;
+  gap: 2rem;
+}
+label, p{
+  font-size: 1.5rem;
+  color: rgba(13, 68, 127, 0.733);
+}
+select{
+  width: 40%;
+  font-size: 1.3rem;
+  outline: none;
+  color: #6ec5ca;
+  border: 1px solid #075c66;
+}
+.main-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  margin: 3rem 0;
+  flex-direction: column;
+  gap: 3rem;
+}
+.form-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.set-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  margin-left: 3rem;
+}
+.image-preview-container{
+    display: none;
+}
+#image-preview {
+  width: 20%;
+}
+.submit-button{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.submit-button button{
+  width: 15%;
+  padding: .5rem;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  background-color: #03C9D4;;
+  outline: none;
+  border: none;
+  color: #ffff;
+  margin-bottom: 2rem;
+}
+sup{
+color: rgb(185, 17, 17);
+}
+#outfit{
+  color: #3fa5b0;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+/* Your existing CSS */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-images img {
+  width: 30%;
+  margin: 10px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:1025px) {
+  .form-field {
+    color: #ffff;
+    width: 90%;
+    background-color:#ffff;
+  }
+}
+@media only screen and (max-width:769px) {
+  .form-field {
+    color: #ffff;
+    width: 80%;
+    background-color:#ffff;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+  label, p{
+    font-size: 1rem;
+  }
+  select{
+    width: 50%;
+    font-size: 1rem;
+  }
+  .submit-button button{
+    width: 15%;
+    padding: .2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 15px;
+    border: 1px solid #888;
+    width: 50%; 
+  }
+  #modal-images {
+    width: 40%;
+    margin-top: 2rem;
+  }
+  #modal-images img {
+    width: 100%;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width:426px) {
+  .form-field {
+    color: #ffff;
+    width: 95%;
+    background-color:#ffff;
+  }
+  .heading h1 {
+    font-size: 1.2rem;
+  }
+  label, p{
+    font-size: .9rem;
+  }
+  select{
+    width: 50%;
+    font-size: .9rem;
+  }
+  .radio-btn{
+    font-size: .9rem;
+    gap: 2.6rem;
+  }
+  .radio-btn label img{
+    width: 25px;
+  }
+  .set-field{
+    margin-left: 1rem;
+  }
+  .submit-button button{
+    width: 20%;
+    padding: .2rem;
+    font-size: .9rem;
+    border-radius: 50px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 15px;
+    border: 1px solid #888;
+    width: 30%; 
+  }
+  #modal-images {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #modal-images img {
+    width: 100%;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width:376px) {
+  .form-field {
+    color: #ffff;
+    width: 95%;
+    background-color:#ffff;
+  }
+  .heading{
+    padding: 2rem;
+  }
+  .heading h1 {
+    font-size: 1rem;
+  }
+  label, p{
+    font-size: .7rem;
+  }
+  select{
+    width: 50%;
+    font-size: .7rem;
+  }
+  .radio-btn{
+    font-size: .7rem;
+    gap: 2.6rem;
+  }
+  .radio-btn label img{
+    width: 20px;
+  }
+  .set-field{
+    margin-left: .9rem;
+  }
+  .submit-button button{
+    width: 20%;
+    padding: .2rem;
+    font-size: .7rem;
+    border-radius: 50px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 15px;
+    border: 1px solid #888;
+    width: 30%; 
+  }
+  #modal-images {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #modal-images img {
+    width: 100%;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width:321px) {
+  .form-field {
+    color: #ffff;
+    width: 100%;
+    background-color:#ffff;
+  }
+  .heading h1 {
+    font-size: .8rem;
+  }
+  label, p{
+    font-size: .7rem;
+  }
+  select{
+    width: 40%;
+    font-size: .7rem;
+  }
+  .radio-btn{
+    font-size: .7rem;
+    gap: 1.6rem;
+  }
+  .radio-btn label img{
+    width: 20px;
+  }
+  .submit-button button{
+    width: 20%;
+    padding: .2rem;
+    font-size: .7rem;
+    border-radius: 50px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 15px;
+    border: 1px solid #888;
+    width: 30%; 
+  }
+  #modal-images {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #modal-images img {
+    width: 100%;
+    margin: 10px;
+  }
+}

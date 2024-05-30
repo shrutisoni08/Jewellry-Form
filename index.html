@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Perfect Jewellery for you</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="form-field" action="">
+        <div class="heading">
+          <h1>Let's Find Perfect Jewellery For You</h1>
+        </div>
+        <div class="main-container">
+          <div class="set-field">
+            <div class="select-field">
+              <label for="occasion"
+                ><b>.</b> Select Your Occasion<sup>*</sup></label
+              >
+              <select id="occasion" name="occasion">
+                <option value="anniversary">Choose Occasion:</option>
+                <option value="engagement">Engagement</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="birthday">Birthday</option>
+                <option value="daily-wear">Daily Wear</option>
+                <option value="wedding">Wedding</option>
+              </select>
+            </div>
+            <hr />
+            <div class="select-field">
+              <label for="budget"
+                ><b>.</b> Select Your Budget<sup>*</sup></label
+              >
+              <select id="budget" name="budget" required>
+                <option value="0-100">$0 - $100</option>
+                <option value="101-500">$101 - $500</option>
+                <option value="501-1000">$501 - $1000</option>
+                <option value="1001-5000">$1001 - $5000</option>
+              </select>
+            </div>
+            <hr />
+
+            <div class="form-input">
+              <div class="input-text">
+                <p><b>.</b> Gift or Personal Purchase</p>
+              </div>
+              <div class="radio-btn">
+                <label
+                  ><input type="radio" name="purchase" value="gift" />
+                  Gift</label
+                >
+                <label
+                  ><input type="radio" name="purchase" value="personal" />
+                  Personal Purchase</label
+                >
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-input gift-radio">
+              <div class="input-text">
+                <p><b>.</b> Gender<sup>*</sup></p>
+              </div>
+              <div class="radio-btn">
+                <label>
+                  <input type="radio" name="gender" value="male" />
+                  <img src="images/man.png" alt="Male" class="gender-icon" />
+                  Male
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    id="gender-female"
+                  />
+                  <img
+                    src="images/woman.png"
+                    alt="Female"
+                    class="gender-icon"
+                  />
+                  Female
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="other" />
+                  <img src="images/other.png" alt="Other" class="gender-icon" />
+                  Other
+                </label>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-input gift-radio">
+              <div class="input-text">
+                <p><b>.</b> Age (Optional)</p>
+              </div>
+              <div class="radio-btn">
+                <label
+                  ><input type="radio" name="age-group" value="18-25" />
+                  18-25</label
+                >
+                <label
+                  ><input type="radio" name="age-group" value="26-35" />
+                  26-35</label
+                >
+                <label
+                  ><input type="radio" name="age-group" value="36-45" />
+                  36-45</label
+                >
+                <label
+                  ><input type="radio" name="age-group" value="46+" />
+                  46+</label
+                >
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div class="set-field">
+            <div class="form-input gift-radio">
+              <div class="input-text">
+                <p><b>.</b> Type of Jewelry<sup>*</sup></p>
+              </div>
+              <div class="radio-btn">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jewelry-type"
+                    value="rings"
+                    id="jewelry-rings"
+                  />
+                  Rings
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jewelry-type"
+                    value="necklaces"
+                    id="jewelry-necklaces"
+                  />
+                  Necklaces
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jewelry-type"
+                    value="pendants"
+                    id="jewelry-pendants"
+                  />
+                  Pendants
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jewelry-type"
+                    value="all"
+                    id="jewelry-all"
+                  />
+                  All
+                </label>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-input gift-radio">
+              <div class="input-text">
+                <p><b>.</b> Religion (Optional):</p>
+              </div>
+              <div class="radio-btn">
+                <label>
+                  <input type="radio" name="religion" value="christianity" />
+                  Hinduism
+                </label>
+                <label>
+                  <input type="radio" name="religion" value="islam" />Islam
+                </label>
+                <label>
+                  <input type="radio" name="religion" value="hinduism" />
+                  Sikhism
+                </label>
+                <label>
+                  <input type="radio" name="religion" value="hinduism" />
+                  Christianity
+                </label>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-input">
+              <label for="outfit"
+                ><b>.</b> Upload an image of your outfit (Optional):</label
+              >
+              <input type="file" id="outfit" name="outfit" accept="image/*" />
+              <div id="image-preview-container">
+                <img
+                  src="./Images/image.png"
+                  id="image-preview"
+                  alt="Outfit Preview"
+                />
+                <button type="button" id="remove-image">Remove Image</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <br />
+
+        <div class="submit-button">
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-images"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
